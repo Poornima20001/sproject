@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public  class Usercontroller {
 	@Autowired
 	private Userservice service;
-	@GetMapping("/users")
+	@GetMapping("/users1")
 	public List<ResponseUserDTO>users(){
 		
 		return service.getAllDetails();
