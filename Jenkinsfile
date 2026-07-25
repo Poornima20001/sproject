@@ -26,5 +26,12 @@ stage('mvn') {
                 bat 'mvn test'
             }
         }
+        stage('Build Docker Image') {
+    steps {
+        // Build a Docker image using the Dockerfile
+        bat 'docker build -t springboot-app:1.0 '
+    }
+}
+
     }
 }
