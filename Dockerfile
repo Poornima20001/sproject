@@ -1,14 +1,14 @@
-# Use an official OpenJDK 17 image as the base image
-FROM openjdk:17-jdk-slim
+# Use Eclipse Temurin JDK 17 as the base image
+FROM eclipse-temurin:17-jdk
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the generated JAR file from the local machine to the container
-COPY target/myapp.jar app.jar
+# Copy the generated JAR file
+COPY target/*.jar app.jar
 
-# Expose port 8080 so the application can receive requests
+# Expose application port
 EXPOSE 8080
 
-# Command to run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run the Spring Boot application
+ENTRYPOINT ["java","-jar","app.jar"]
