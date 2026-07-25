@@ -21,9 +21,15 @@ pipeline {
             }
         }
 
-        stage('Maven Test') {
+        stage('Build Project') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn clean package'
+            }
+        }
+
+        stage('Verify JAR') {
+            steps {
+                bat 'dir target'
             }
         }
 
