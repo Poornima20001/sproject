@@ -1,6 +1,7 @@
 package com.sproject.sproject;
 
 import java.time.LocalDateTime;
+import jakarta.persistence.Table;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
