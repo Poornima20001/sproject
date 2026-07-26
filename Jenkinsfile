@@ -47,7 +47,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -d -p 8080:8080 --name springboot-container springboot-app:1.0'
+                bat 'docker run -d -p 8083:8080 --name springboot-container springboot-app:1.0'
             }
         }
     }
